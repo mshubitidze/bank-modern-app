@@ -4,7 +4,7 @@ import Button from "./Button";
 
 const FeatureCard = ({ icon, title, content, index }) => (
   <div
-    className={`p=6 flex flex-row rounded-[20px] ${
+    className={`flex flex-row rounded-[20px] p-6 ${
       index !== features.length - 1 ? "mb-6" : "mb-0"
     } feature-card`}
   >
@@ -13,11 +13,11 @@ const FeatureCard = ({ icon, title, content, index }) => (
     >
       <img src={icon} alt="icon" className="h-[50%] w-[50%] object-contain" />
     </div>
-    <div className="ml-3 flex flex-1 flex-col">
-      <h4 className="mb-1 font-poppins text-[18px] font-semibold leading-[23px] text-white">
+    <div className="flex flex-col flex-1 ml-3">
+      <h4 className="mb-1 font-semibold text-white font-poppins text-[18px] leading-[23px]">
         {title}
       </h4>
-      <p className="mb-1 font-poppins text-[16px] font-semibold leading-[24px] text-dimWhite">
+      <p className="mb-1 font-semibold font-poppins text-[16px] leading-[24px] text-dimWhite">
         {content}
       </p>
     </div>
