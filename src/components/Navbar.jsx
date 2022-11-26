@@ -7,58 +7,48 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className="w-full flex py-6 justify-between
-                    items-center navbar">
-      <img
-        src={logo}
-        alt="hoobank"
-        className="w-[124px] h-[32px]"
-      />
-      <ul className="list-none sm:flex hidden
-                     justify-end items-center flex-1">
+    <nav className="navbar flex w-full items-center justify-between py-6">
+      <img src={logo} alt="hoobank" className="h-[32px] w-[124px]" />
+      <ul className="hidden flex-1 list-none items-center justify-end sm:flex">
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
-            className={`font-poppins font-normal 
-                        cursor-pointer
-                        text-[16px]
-                        ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}
-                        text-white`}
+            className={`cursor-pointer font-poppins text-[16px] font-normal ${
+              index === navLinks.length - 1 ? "mr-0" : "mr-10"
+            } text-white`}
           >
-            <a href={`#${nav.id}`}>
-              {nav.title}
-            </a>
+            <a href={`#${nav.id}`}>{nav.title}</a>
           </li>
         ))}
       </ul>
-      <div className="sm:hidden flex flex-1 justify-end items-center">
+      <div className="flex flex-1 items-center justify-end sm:hidden">
         <img
           src={toggle ? close : menu}
           alt="menu"
-          className="w-[28px] h-[28px] object-contain"
+          className="h-[28px] w-[28px] object-contain"
           onClick={() => setToggle((prev) => !prev)}
         />
         <div
           className={`${toggle ? "flex" : "hidden"}
-                     p-6 bg-black-gradient absolute
+                     bg-black-gradient sidebar absolute
                      top-20 right-0 mx-4 min-w-[140px]
-                     rounded-xl sidebar`}
+                     rounded-xl p-6`}
         >
-          <ul className="list-none flex flex-col 
-                         justify-end items-center flex-1">
+          <ul
+            className="flex flex-1 list-none 
+                         flex-col items-center justify-end"
+          >
             {navLinks.map((nav, index) => (
               <li
                 key={nav.id}
-                className={`font-poppins
-                           font-normal 
-                           cursor-pointer
+                className={`cursor-pointer
+                           font-poppins 
                            text-[16px]
+                           font-normal
                            ${index === navLinks.length - 1 ? "mr-0" : "mb-4"}
                            text-white`}
               >
-                <a href={`#${nav.id}`}>
-                  {nav.title}
-                </a>
+                <a href={`#${nav.id}`}>{nav.title}</a>
               </li>
             ))}
           </ul>

@@ -3,24 +3,22 @@ import { arrowUp } from "../assets";
 
 const GetStarted = () => (
   <div
-    className={`${styles.flexCenter} w-[140px] h-[140px] rounded-full
-               bg-blue-gradient p-[2px] cursor-pointer `}
+    className={`${styles.flexCenter} bg-blue-gradient h-[140px] w-[140px] cursor-pointer rounded-full p-[2px] `}
   >
     <div
-      className={`${styles.flexCenter} flex-col bg-primary w-[100%] h-[100%]
-                 rounded-full`}
+      className={`${styles.flexCenter} h-[100%] w-[100%] flex-col rounded-full bg-primary`}
     >
       <div className={`${styles.flexStart} flex-row`}>
-        <p className="font-poppins font-medium text-[18px] leading-[23.4px]">
+        <p className="font-poppins text-[18px] font-medium leading-[23.4px]">
           <span className="text-gradient">Get</span>
         </p>
         <img
           src={arrowUp}
           alt="arrow-up"
-          className="w-[23px] h-[23px] object-contain"
+          className="h-[23px] w-[23px] object-contain"
         />
       </div>
-      <p className="font-poppins font-medium text-[18px] leading-[23.4px]">
+      <p className="font-poppins text-[18px] font-medium leading-[23.4px]">
         <span className="text-gradient">Started</span>
       </p>
     </div>
